@@ -1,0 +1,6 @@
+<!doctype html><html><head><link rel='stylesheet' href='/styles.css'><title>Admin Dashboard</title></head><body>
+<header><h2>CreatorOS Admin Dashboard</h2><nav><a href='/admin/dashboard.html'>Dashboard</a><a href='/admin/collaborations.html'>CRM</a><a href='/admin/followups.html'>Follow-Ups</a><a href='/admin/tasks.html'>Tasks</a><a href='/admin/calendar.html'>Calendar</a><a href='/portfolio/index.html'>Public Site</a></nav></header>
+<main><section class='grid cols-4'><div class='kpi'><h3>Active Collaborations</h3><div id='active'>-</div></div><div class='kpi'><h3>Follow-Ups Required</h3><div id='fu'>-</div></div><div class='kpi'><h3>Pending Responses</h3><div id='pending'>-</div></div><div class='kpi'><h3>Scheduled Content</h3><div id='scheduled'>-</div></div></section><section class='card'><h3>Follow-up List</h3><pre id='list'>Loading...</pre></section></main>
+<script>
+(async()=>{const d=await fetch('/api/dashboard').then(r=>r.json()).catch(()=>({}));active.textContent=d.activeCollaborations??0;fu.textContent=d.followUpsRequired??0;pending.textContent=d.pendingResponses??0;scheduled.textContent=(d.scheduledContent??0);list.textContent=JSON.stringify(d.followUps||[],null,2)})();
+</script></body></html>
