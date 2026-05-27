@@ -1,0 +1,11 @@
+<!doctype html><html><body><h2>CRM</h2>
+<form id='f'>
+<input name='brand_name' placeholder='Brand Name' required/>
+<input name='last_conversation_date' type='date' required/>
+<select name='status'><option>New Lead</option><option>Awaiting Response</option><option>Completed</option></select>
+<button type='submit'>Add</button></form>
+<pre id='out'></pre>
+<script>
+async function load(){const d=await fetch('/api/collaborations').then(r=>r.json());out.textContent=JSON.stringify(d,null,2)}
+f.onsubmit=async(e)=>{e.preventDefault();const b=Object.fromEntries(new FormData(f).entries());await fetch('/api/collaborations',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(b)});load();};load();
+</script></body></html>

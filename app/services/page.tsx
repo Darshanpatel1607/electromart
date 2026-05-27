@@ -1,0 +1,1 @@
+export default function Page(){return <main className='max-w-3xl mx-auto p-8'><h1 className='text-3xl font-bold mb-3'>Services</h1><ul className='list-disc pl-6'><li>Sponsored Reels</li><li>UGC</li><li>YouTube Integrations</li></ul></main>}
