@@ -1,0 +1,1 @@
+export default function Page(){return <main className='max-w-3xl mx-auto p-8'><h1 className='text-3xl font-bold mb-3'>Featured Work</h1><p>Instagram reels, YouTube videos, and product photography.</p></main>}

@@ -1,0 +1,3 @@
+import AdminLayout from '@/components/admin-layout';
+import { collaborations, calendar } from '@/data/demo';
+export default function Page(){return <AdminLayout><h1 className='text-2xl font-bold mb-4'>Dashboard</h1><div className='grid grid-cols-4 gap-3 mb-6'>{[['Active Collaborations',collaborations.length],['Follow-Ups Required',collaborations.length],['Pending Responses',1],['Scheduled Content',calendar.filter(c=>c.status==='Scheduled').length]].map(([l,v])=><div key={String(l)} className='bg-white p-4 rounded border'><p className='text-sm text-slate-500'>{l}</p><p className='text-2xl font-semibold'>{v}</p></div>)}</div></AdminLayout>}

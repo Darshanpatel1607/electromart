@@ -1,0 +1,3 @@
+<!doctype html><html><body><h2>Follow Ups</h2><pre id='out'>Loading...</pre><script>
+fetch('/api/follow-ups').then(r=>r.json()).then(d=>out.textContent=JSON.stringify(d,null,2));
+</script></body></html>
