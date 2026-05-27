@@ -24,12 +24,14 @@ You can run the exact same code on:
 
 ## Environment variables
 
+> Security: Never commit `.env.local` or real API keys. Use placeholders in repo files and set real values only in local environment variables or deployment secrets.
+
 Create `.env.local` in project root:
 
 ```env
-SUPABASE_URL=https://kphrhgnxtqcbtiehmodd.supabase.co
-SUPABASE_ANON_KEY=YOUR_SUPABASE_ANON_KEY
-OPENAI_API_KEY=YOUR_OPENAI_API_KEY
+SUPABASE_URL=https://your-project-id.supabase.co
+SUPABASE_ANON_KEY=sb_publishable_your_key_here
+OPENAI_API_KEY=your_openai_api_key_here
 PORT=4000
 ```
 
@@ -162,9 +164,9 @@ npm run start
 Set in `.env.local`:
 
 ```env
-SUPABASE_URL=https://kphrhgnxtqcbtiehmodd.supabase.co
-SUPABASE_ANON_KEY=YOUR_SUPABASE_ANON_KEY
-OPENAI_API_KEY=YOUR_OPENAI_API_KEY
+SUPABASE_URL=https://your-project-id.supabase.co
+SUPABASE_ANON_KEY=sb_publishable_your_key_here
+OPENAI_API_KEY=your_openai_api_key_here
 ```
 
 For Vercel: add the same keys in Project Settings → Environment Variables.
