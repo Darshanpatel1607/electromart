@@ -1,0 +1,2 @@
+import Link from 'next/link';
+export default function Home(){return <main className='max-w-4xl mx-auto p-8 space-y-4'><h1 className='text-3xl font-bold'>Coffee Creator Portfolio</h1><p>Featured work, services, and collaboration inquiries.</p><div className='flex gap-4'><Link href='/dashboard' className='px-4 py-2 rounded bg-slate-900 text-white'>Go to Admin</Link><Link href='/services' className='px-4 py-2 rounded border'>View Services</Link></div></main>}
